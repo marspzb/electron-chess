@@ -1,0 +1,126 @@
+
+.chess-board-container{
+    /* width: 400px;
+     height: 400px;*/
+     width: 75%;
+     height: 75%;
+     display: table;
+     position: absolute;
+     top:3%;
+     left:2.5%;
+     
+     
+ }
+ .chess-board{
+     display: table;
+     width: 100%;
+     height: 100%;
+     
+ }
+ .chess-board-row{
+     display: table-row;
+ 
+ }
+ 
+ .chess-board-cell{
+     display: table-cell;
+     width: 12.5%;
+     height: 12.5%;
+ }
+ 
+ .chess-board-cell-white{
+     background: #f7f7f7;
+ }
+ .chess-board-cell-black{
+     background:#4fb74f;
+     background: #18a01a;
+ }
+ 
+ .chess-piece{
+     background: url('./chess_pieces.png');
+     background-size: 600% 200%;
+     position: absolute;
+     width: 12.5%;
+     height: 12.5%;
+     background-position-y:0%;
+     cursor: pointer;
+     
+ }
+
+ .chess-piece--black{
+     background-position-y:100%;
+ }
+ 
+ .chess-piece--pawn{
+     background-position-x: 100%;
+ }
+ .chess-piece--tower{
+     background-position-x: 80%;
+ 
+ }
+ 
+ .chess-piece--king{
+     background-position-x: 0%;
+ 
+ }
+ .chess-piece--knight{
+     background-position-x: 60%;
+ 
+ }
+ .chess-piece--bishop{
+     background-position-x: 40%;
+ }    
+ .chess-piece--queen{
+     background-position-x: 20%;
+ }
+ 
+ .app-title{
+     height: 50px;
+     padding: 0;
+     margin: 0;
+     vertical-align: bottom;
+     text-shadow: 0px 3px 2px rgb(193, 193, 193);
+     color: white;
+     background: #3b3a56;
+     flex-grow: 1;
+ }
+ body{
+     margin: 0;
+ }
+ 
+ .l-chess-board-container{
+     float: left;
+ 
+ }
+ .l-flex-container{
+     display: flex;
+     width: 100%;
+ }
+ 
+ 
+ .l-flex-left-margin{
+     flex-basis: 20px;
+ }
+ .l-flex-right-margin{
+     flex-basis: 20px;
+ }
+ .l-flex-right-container{
+     flex-grow: 1;
+ }
+ 
+ .game-record-component{
+     border-bottom: 1px solid gray;
+ 
+ }
+ .game-record-component ul{
+     list-style: none;
+     min-height: 20px;
+     border: 1px solid lightgray;
+ }
+ .game-record-component ul li{
+     display: inline-block;
+     margin-left: 10px;
+ }
+ .l-flex-board-container{
+     position: relative;
+ }

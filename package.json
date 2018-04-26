@@ -1,0 +1,85 @@
+{
+  "name": "Gess",
+  "version": "1.0.0",
+  "description": "This is a POC of a chess done in  ElectronJs ",
+  "main": "dist/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node fuse ",
+    "start": "npm run build && electron ./dist/main.js",
+    "electron": "electron ./dist/main.js",
+    "pack": "npm run build && electron-builder --dir",
+    "dist": "npm run build  && electron-builder -mwl",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "author": "Marcos",
+  "license": "ISC",
+  "build": {
+    "appId": "com.poc.gess",
+    "directories": {
+      "output": "publish"
+    },
+    "files": [
+      {
+        "from": "dist",
+        "to": "dist",
+        "filter": [
+          "**/*"
+        ]
+      },
+      {
+        "from": "./",
+        "to": "./",
+        "filter": [
+          "package.json",
+          "index.html"
+        ]
+      }
+    ],
+    "mac": {
+      "category": "public.app-category.games",
+      "target": "dmg"
+    },
+    "win": {
+      "target": {
+        "target": "portable",
+        "arch": [
+          "x64",
+          "ia32"
+        ]
+      }
+    }
+  },
+  "dependencies": {
+    "@types/react": "^16.0.34",
+    "@types/react-dom": "^16.0.3",
+    "@types/react-redux": "^5.0.14",
+    "@types/redux-actions": "^2.2.3",
+    "lodash": "^4.17.4",
+    "matter-js": "^0.14.0",
+    "p5": "^0.5.16",
+    "react": "^16.2.0",
+    "react-dnd": "^2.5.4",
+    "react-dnd-html5-backend": "^2.5.4",
+    "react-dom": "^16.2.0",
+    "react-motion": "^0.5.2",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-actions": "^2.2.1",
+    "redux-saga": "^0.16.0",
+    "socket.io": "^2.0.4"
+  },
+  "devDependencies": {
+    "electron": "^1.7.8",
+    "electron-builder": "^19.54.0",
+    "fuse-box": "^3.0.2",
+    "fuse-tools": "^1.0.5",
+    "less": "^2.7.3",
+    "postcss": "^6.0.15",
+    "tslib": "^1.8.1",
+    "typescript": "^2.6.2",
+    "uglify-es": "^3.3.7",
+    "uglify-js": "^3.3.4"
+  }
+}
